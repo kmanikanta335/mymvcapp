@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+</head>
+<body >
+    <center>
+        <h1>Update Employee</h1>
+        <form action="/web/update" method="POST">
+            <input type="hidden" name="eid" value="<%= employee.eid %>">
+            <div>
+                <label for="ename">Name:</label>
+                <input type="text" id="ename" name="ename" value="<%= employee.ename %>" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= employee.email %>" required>
+            </div>
+            <div>
+                <button type="submit">Update</button>
+                <a href="/web">Cancel</a>
+            </div>
+        </form>
+    </center>
+</body>
+</html>
